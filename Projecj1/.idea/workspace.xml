@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="eac00078-92b5-457b-8255-359265af0d2a" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ctjcz2irSmbZdkRfROZN3RvXjm" />
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\IDEA\Bit-Study\Projecj1\src" />
+      <recent name="F:\IDEA\Bit-Study\Projecj1\lib" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="JDBCDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="JDBCDemo" />
+      <module name="Projecj1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="blog.Main" />
+      <module name="Projecj1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="blog.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MySQLClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.peixinchen.MySQLClient" />
+      <module name="Projecj1" />
+      <option name="PROGRAM_PARAMETERS" value="-u root huojianban2_0601" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.peixinchen.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.MySQLClient" />
+        <item itemvalue="Application.JDBCDemo" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eac00078-92b5-457b-8255-359265af0d2a" name="Default Changelist" comment="" />
+      <created>1591354866149</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591354866149</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="446" y="109" key="#Main" timestamp="1591614550475">
+      <screen x="0" y="0" width="1474" height="864" />
+    </state>
+    <state x="446" y="109" key="#Main/0.0.1474.864@0.0.1474.864" timestamp="1591614550475" />
+    <state x="446" y="109" key="#MySQLClient" timestamp="1591495417885">
+      <screen x="0" y="0" width="1474" height="864" />
+    </state>
+    <state x="446" y="109" key="#MySQLClient/0.0.1474.864@0.0.1474.864" timestamp="1591495417885" />
+    <state x="543" y="141" key="#com.intellij.ide.util.MemberChooser" timestamp="1591617768598">
+      <screen x="0" y="0" width="1474" height="864" />
+    </state>
+    <state x="543" y="141" key="#com.intellij.ide.util.MemberChooser/0.0.1474.864@0.0.1474.864" timestamp="1591617768598" />
+    <state x="497" y="311" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1591363439668">
+      <screen x="0" y="0" width="1474" height="864" />
+    </state>
+    <state x="497" y="311" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1474.864@0.0.1474.864" timestamp="1591363439668" />
+    <state x="437" y="186" key="FileChooserDialogImpl" timestamp="1591355199762">
+      <screen x="0" y="0" width="1474" height="864" />
+    </state>
+    <state x="437" y="186" key="FileChooserDialogImpl/0.0.1474.864@0.0.1474.864" timestamp="1591355199762" />
+    <state width="1431" height="579" key="GridCell.Tab.0.bottom" timestamp="1591620652917">
+      <screen x="0" y="0" width="1474" height="864" />
+    </state>
+    <state width="1431" height="579" key="GridCell.Tab.0.bottom/0.0.1474.864@0.0.1474.864" timestamp="1591620652917" />
+    <state width="1431" height="579" key="GridCell.Tab.0.center" timestamp="1591620652917">
+      <screen x="0" y="0" width="1474" height="864" />
+    </state>
+    <state width="1431" height="579" key="GridCell.Tab.0.center/0.0.1474.864@0.0.1474.864" timestamp="1591620652917" />
+    <state width="1431" height="579" key="GridCell.Tab.0.left" timestamp="1591620652917">
+      <screen x="0" y="0" width="1474" height="864" />
+    </state>
+    <state width="1431" height="579" key="GridCell.Tab.0.left/0.0.1474.864@0.0.1474.864" timestamp="1591620652917" />
+    <state width="1431" height="579" key="GridCell.Tab.0.right" timestamp="1591620652917">
+      <screen x="0" y="0" width="1474" height="864" />
+    </state>
+    <state width="1431" height="579" key="GridCell.Tab.0.right/0.0.1474.864@0.0.1474.864" timestamp="1591620652917" />
+    <state width="1431" height="277" key="GridCell.Tab.1.bottom" timestamp="1591504334151">
+      <screen x="0" y="0" width="1474" height="864" />
+    </state>
+    <state width="1431" height="277" key="GridCell.Tab.1.bottom/0.0.1474.864@0.0.1474.864" timestamp="1591504334151" />
+    <state width="1431" height="277" key="GridCell.Tab.1.center" timestamp="1591504334151">
+      <screen x="0" y="0" width="1474" height="864" />
+    </state>
+    <state width="1431" height="277" key="GridCell.Tab.1.center/0.0.1474.864@0.0.1474.864" timestamp="1591504334151" />
+    <state width="1431" height="277" key="GridCell.Tab.1.left" timestamp="1591504334151">
+      <screen x="0" y="0" width="1474" height="864" />
+    </state>
+    <state width="1431" height="277" key="GridCell.Tab.1.left/0.0.1474.864@0.0.1474.864" timestamp="1591504334151" />
+    <state width="1431" height="277" key="GridCell.Tab.1.right" timestamp="1591504334151">
+      <screen x="0" y="0" width="1474" height="864" />
+    </state>
+    <state width="1431" height="277" key="GridCell.Tab.1.right/0.0.1474.864@0.0.1474.864" timestamp="1591504334151" />
+    <state x="241" y="20" key="SettingsEditor" timestamp="1591363944031">
+      <screen x="0" y="0" width="1474" height="864" />
+    </state>
+    <state x="241" y="20" key="SettingsEditor/0.0.1474.864@0.0.1474.864" timestamp="1591363944031" />
+    <state x="468" y="192" key="extract.method.dialog" timestamp="1591359787497">
+      <screen x="0" y="0" width="1474" height="864" />
+    </state>
+    <state x="468" y="192" key="extract.method.dialog/0.0.1474.864@0.0.1474.864" timestamp="1591359787497" />
+    <state x="147" y="48" key="new project wizard" timestamp="1591670939740">
+      <screen x="0" y="0" width="1474" height="864" />
+    </state>
+    <state x="147" y="48" key="new project wizard/0.0.1474.864@0.0.1474.864" timestamp="1591670939740" />
+    <state x="441" y="55" key="refactoring.ChangeSignatureDialog" timestamp="1591498938540">
+      <screen x="0" y="0" width="1474" height="864" />
+    </state>
+    <state x="441" y="55" key="refactoring.ChangeSignatureDialog/0.0.1474.864@0.0.1474.864" timestamp="1591498938540" />
+    <state x="400" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1591617011717">
+      <screen x="0" y="0" width="1474" height="864" />
+    </state>
+    <state x="400" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1474.864@0.0.1474.864" timestamp="1591617011717" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/blog/UserLoginAction.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
