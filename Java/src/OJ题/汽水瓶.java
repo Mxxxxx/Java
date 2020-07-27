@@ -19,7 +19,7 @@ public class 汽水瓶 {
         return sum;
     }
 
-    public static void main(String[] args) {
+    public static void main1(String[] args) {
         Scanner in = new Scanner(System.in);
         while (in.hasNext()) {
             int num = in.nextInt();
