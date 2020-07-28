@@ -14,7 +14,6 @@ public class 插入排序 {
                 if (array[j] > tmp) {//i的前一个比i大的话，将大的值赋值给i
                     array[j + 1] = array[j];
                 } else {
-//                    array[j + 1] = tmp;
                     break;//如果i的前一个比i小，前面的就不需要再比较，直接跳出
                 }
             }
