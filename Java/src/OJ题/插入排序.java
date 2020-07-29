@@ -15,9 +15,10 @@ public class 插入排序 {
                     array[j + 1] = array[j];
                 } else {
                     break;//如果i的前一个比i小，前面的就不需要再比较，直接跳出
+                    //跳出时，j的下标是j的前一个
                 }
             }
-            array[j + 1] = tmp;
+            array[j + 1] = tmp;//最后将tmp的值给
         }
     }
 }
