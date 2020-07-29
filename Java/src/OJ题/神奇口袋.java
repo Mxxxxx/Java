@@ -10,6 +10,7 @@ public class 神奇口袋 {
     static int count = 0;//表示有多少种
     static int[] arr; //表示口袋
     static int n;//表示物品的种类
+
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         while (input.hasNext()) {
