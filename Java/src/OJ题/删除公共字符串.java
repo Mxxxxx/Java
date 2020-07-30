@@ -1,3 +1,5 @@
+package OJ题;
+
 import java.util.Scanner;
 
 /**
