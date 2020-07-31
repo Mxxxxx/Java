@@ -7,6 +7,7 @@ import java.util.Scanner;
  * @Date 2020/7/29 7:25
  */
 public class 删除公共字符串 {
+
     public static void func(String A, String B) {
         for (int i = 0; i < A.length(); i++) {
             if (!B.contains(A.charAt(i) + "")) {
