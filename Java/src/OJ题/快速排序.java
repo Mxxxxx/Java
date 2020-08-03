@@ -59,13 +59,11 @@ public class 快速排序 {
             swap(array, left, right);
         }
     }
-
     private static void swap(int[] array, int i, int j) {
         int tmp = array[i];
         array[i] = array[j];
         array[j] = tmp;
     }
-
     public static void quickSort(int[] array) {
         quick(array, 0, array.length - 1);
     }
