@@ -9,7 +9,6 @@ import java.util.Scanner;
  * @Author Meng Xin
  * @Date 2020/8/3 10:15
  */
-
 public class 餐馆金额最大 {
     static class Customer implements Comparable<Customer> {
         public int num;//某批人数
