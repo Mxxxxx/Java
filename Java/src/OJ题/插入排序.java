@@ -4,6 +4,9 @@ package OJ题;
  * @Author Meng Xin
  * @Date 2020/7/28 21:33
  */
+//时间复杂度 O(n^2)
+//空间复杂度O(1)
+//稳定
 public class 插入排序 {
     public static void func(int[] array) {
         int tmp = array[0];

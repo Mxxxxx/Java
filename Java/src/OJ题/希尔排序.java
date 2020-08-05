@@ -6,6 +6,7 @@ package OJ题;
  */
 //时间复杂度 O(n^2)
 //空间复杂度O(1)
+//不稳定
 public class 希尔排序 {
     public static void shellSort(int[] array) {
         int[] drr = {5, 3, 1};
