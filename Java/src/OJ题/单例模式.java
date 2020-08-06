@@ -24,6 +24,7 @@ class SingletonHungry {
         return singletonHungry;
     }
 }
+
 //class SingletonHungry {
 //    //类加载时，就实例化，并且创建单例对象
 //    private static SingletonHungry singletonHungry = new SingletonHungry();
@@ -32,6 +33,16 @@ class SingletonHungry {
 //        return singletonHungry;
 //    }
 //}
+class A {
+    private static A a = new A();
+
+    private A() {
+    }
+
+    public static A getInstance() {
+        return a;
+    }
+}
 
 //懒汉模式
 class SingletonLazy {
@@ -47,6 +58,21 @@ class SingletonLazy {
         return singletonLazy;
     }
 }
+
+class B {
+    private static B b;
+
+    private B() {
+    }
+
+    public static synchronized B getInstance() {
+        if (b == null) {
+            b = new B();
+        }
+        return b;
+    }
+}
+
 //class SingletonLazy {
 //    private static SingletonLazy singletonLazy;
 //
@@ -83,5 +109,23 @@ class Singleton1 {
             }
         }
         return singleton;
+    }
+}
+
+class C {
+    private static C c;
+
+    private C() {
+    }
+
+    public static C getInstance() {
+        if (c == null) {
+            synchronized (C.class) {
+                if (c == null) {
+                    c = new C();
+                }
+            }
+        }
+        return c;
     }
 }
