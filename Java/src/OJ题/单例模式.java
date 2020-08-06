@@ -63,7 +63,6 @@ class SingletonLazy {
 //        return singletonLazy;
 //    }
 //}
-
 // 双重检查锁定单例(Double Check Lock)
 class Singleton1 {
     private static Singleton1 singleton;
