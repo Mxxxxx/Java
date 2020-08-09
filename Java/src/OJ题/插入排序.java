@@ -24,4 +24,21 @@ public class 插入排序 {
             array[j + 1] = tmp;//最后将tmp的值给
         }
     }
+
+
+    public static void insertSort(int[] array) {
+        int tmp = array[0];
+        for (int i = 1; i < array.length; i++) {
+            tmp = array[i];
+            int j = i - 1;
+            for (; j >= 0; j--) {
+                if (array[j] > tmp) {
+                    array[j + 1] = array[j];
+                } else {
+                    break;
+                }
+            }
+            array[j + 1] = tmp;
+        }
+    }
 }

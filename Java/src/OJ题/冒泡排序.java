@@ -26,4 +26,21 @@ public class 冒泡排序 {
             }
         }
     }
+
+    public static void bubbleSort(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            boolean flg = false;
+            for (int j = 0; j < array.length - 1 - i; j++) {
+                if (array[i] > array[j]) {
+                    int tmp = array[i];
+                    array[i] = array[j];
+                    array[j] = tmp;
+                    flg = true;
+                }
+            }
+            if (flg == false) {
+                break;
+            }
+        }
+    }
 }

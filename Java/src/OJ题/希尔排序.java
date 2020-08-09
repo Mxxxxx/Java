@@ -31,4 +31,27 @@ public class 希尔排序 {
             array[j + gap] = tmp;
         }
     }
+
+
+    public static void shellaSort(int[] array) {
+        int[] part = {5, 3, 1};
+        for (int i = 0; i < part.length; i++) {
+            shella(array, part[i]);
+        }
+    }
+
+    private static void shella(int[] array, int gap) {
+        for (int i = gap; i < array.length; i++) {
+            int tmp = array[gap];
+            int j = i - gap;
+            for (; j >= 0; j -= gap) {
+                if (array[j] > tmp) {
+                    array[j + gap] = array[j];
+                } else {
+                    break;
+                }
+            }
+            array[j + gap] = tmp;
+        }
+    }
 }
