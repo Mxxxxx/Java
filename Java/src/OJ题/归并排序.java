@@ -35,6 +35,7 @@ public class 归并排序 {
                 ret[i++] = array[s2++];
             }
         }
+
         while (s1 <= mid) {
             ret[i++] = array[s1++];
         }
