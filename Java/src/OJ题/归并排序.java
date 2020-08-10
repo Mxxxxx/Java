@@ -11,6 +11,7 @@ public class 归并排序 {
     public static void mergeSort1(int[] array) {
         mereSorInt1(array, 0, array.length - 1);
     }
+
     private static void mereSorInt1(int[] array, int low, int high) {
         if (low >= high) {
             return;
