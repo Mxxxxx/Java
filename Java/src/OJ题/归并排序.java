@@ -20,7 +20,6 @@ public class 归并排序 {
         mereSorInit1(array, mid + 1, hight);
         merge1(array, low, mid, hight);
     }
-
     private static void merge1(int[] array, int low, int mid, int hight) {
         int s1 = low;
         int s2 = mid + 1;
