@@ -8,9 +8,49 @@ package OJ题;
 //空间:O(n)
 //稳定
 public class 归并排序 {
+    public static void mergeSort2(int[] array) {
+        mereSorInit2(array, 0, array.length - 1);
+    }
+
+    private static void mereSorInit2(int[] array, int low, int high) {
+        if (low >= high) {
+            return;
+        }
+        int mid = (low + high) >>> 1;
+        mereSorInit2(array, low, mid);
+        mereSorInit2(array, mid + 1, high);
+
+        merge2(array, low, mid, high);
+    }
+
+    private static void merge2(int[] array, int low, int mid, int high) {
+        int s1 = low;
+        int s2 = mid + 1;
+        int[] ret = new int[high - low + 1];
+        int i = 0;
+        while (s1 <= mid && s2 <= high) {
+            if (array[s1] <= array[s2]) {
+                ret[i++] = array[s1++];
+            } else {
+                ret[i++] = array[s2++];
+            }
+        }
+        while (s1 <= mid) {
+            ret[i++] = array[s1++];
+        }
+        while (s2 <= high) {
+            ret[i++] = array[s2++];
+        }
+        for (int j = 0; j < ret.length; j++) {
+            array[j + low] = ret[j];
+        }
+    }
+
+
     public static void mergeSort1(int[] array) {
         mereSorInit1(array, 0, array.length - 1);
     }
+
     private static void mereSorInit1(int[] array, int low, int hight) {
         if (low >= hight) {
             return;
@@ -20,6 +60,7 @@ public class 归并排序 {
         mereSorInit1(array, mid + 1, hight);
         merge1(array, low, mid, hight);
     }
+
     private static void merge1(int[] array, int low, int mid, int hight) {
         int s1 = low;
         int s2 = mid + 1;
