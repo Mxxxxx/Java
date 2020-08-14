@@ -8,6 +8,34 @@ package OJ题;
 //时间：O(n^2)
 //空间O(n)
 public class 快速排序 {
+    public static void quickSort1(int[] array) {
+        quick1(array, 0, array.length - 1);
+    }
+
+    private static void quick1(int[] array, int left, int right) {
+        if (left >= right) {
+            return;
+        }
+        int par = partio(array, left, right);
+        quick1(array, left, par - 1);
+        quick1(array, par+1, right);
+    }
+
+    private static int partio(int[] array, int low, int high) {
+        int tmp = array[low];
+        while (low < high) {
+            while (low < high && array[high] >= tmp) {
+                high--;
+            }
+            array[low] = array[high];
+            while (low < high && array[low] <= tmp) {
+                low++;
+            }
+            array[high] = array[low];
+        }
+        return low;
+    }
+
     public static int partition(int[] array, int low, int high) {
         int tmp = array[low];
         while (low < high) {
@@ -59,11 +87,13 @@ public class 快速排序 {
             swap(array, left, right);
         }
     }
+
     private static void swap(int[] array, int i, int j) {
         int tmp = array[i];
         array[i] = array[j];
         array[j] = tmp;
     }
+
     public static void quickSort(int[] array) {
         quick(array, 0, array.length - 1);
     }
