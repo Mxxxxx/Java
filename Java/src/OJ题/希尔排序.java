@@ -54,4 +54,27 @@ public class 希尔排序 {
             array[j + gap] = tmp;
         }
     }
+
+    public static void xiera(int[] array) {
+        int[] gaps = {5, 3, 1};
+        for (int i = 0; i < gaps.length; i++) {
+            xier(array, gaps[i]);
+        }
+    }
+
+    public static void xier(int[] array, int gap) {
+        int tmp = array[0];
+        for (int i = gap; i < array.length; i++) {
+            tmp = array[gap];
+            int j = i - gap;
+            for (; j >= 0; j--) {
+                if (array[j] > array[gap + j]) {
+                    array[j + gap] = array[j];
+                } else {
+                    break;
+                }
+            }
+            array[j + gap] = tmp;
+        }
+    }
 }
