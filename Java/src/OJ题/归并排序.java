@@ -136,7 +136,6 @@ public class 归并排序 {
         //进行合并
         merge(array, low, mid, high);
     }
-
     private static void merge(int[] array, int low, int mid, int high) {
         int s1 = low;//第一段开始
         int s2 = mid + 1;//第二段开始
