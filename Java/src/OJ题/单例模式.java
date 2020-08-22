@@ -15,6 +15,14 @@ public class 单例模式 {
     }
 }
 
+class Hungry {
+    private static Hungry hungry = new Hungry();
+
+    public static Hungry getHungry() {
+        return hungry;
+    }
+}
+
 //饿汉模式
 class SingletonHungry {
     //在类初始化前就创建了对象，一定是线程安全的
@@ -45,6 +53,22 @@ class A {
 }
 
 //懒汉模式
+
+class Lazy {
+    private static Lazy lazy;
+
+    private Lazy() {
+    }
+
+    public static synchronized Lazy getInstance() {
+        if (lazy == null) {
+            lazy = new Lazy();
+        }
+        return lazy;
+    }
+}
+
+
 class SingletonLazy {
     private static SingletonLazy singletonLazy;
 
@@ -109,6 +133,24 @@ class Singleton1 {
             }
         }
         return singleton;
+    }
+}
+
+class SingleDouble {
+    private static SingleDouble singleDouble;
+
+    private SingleDouble() {
+    }
+
+    public static SingleDouble singleDouble() {
+        if (singleDouble == null) {
+            synchronized (SingleDouble.class) {
+                if (singleDouble == null) {
+                    singleDouble = new SingleDouble();
+                }
+            }
+        }
+        return singleDouble;
     }
 }
 
