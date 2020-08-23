@@ -61,7 +61,6 @@ public class 希尔排序 {
             xier(array, gaps[i]);
         }
     }
-
     public static void xier(int[] array, int gap) {
         int tmp = array[0];
         for (int i = gap; i < array.length; i++) {
