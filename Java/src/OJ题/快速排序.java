@@ -8,63 +8,63 @@ package OJ题;
 //时间：O(n^2)
 //空间O(n)
 public class 快速排序 {
-    public static void quickSort2(int[] array) {
-        quick2(array, 0, array.length - 1);
-    }
-
-    private static void quick2(int[] array, int left, int right) {
-        if (left >= right) {
-            return;
-        }
-        int mid = mida(array, left, right);
-        quick2(array, left, mid - 1);
-        quick2(array, mid + 1, right);
-    }
-
-    private static int mida(int[] array, int low, int high) {
-        int tmp = array[low];
-        while (low < high) {
-            while (low < high && array[high] >= tmp) {
-                high--;
-            }
-            array[low] = array[high];
-            while (low <= high && array[low] <= tmp) {
-                low++;
-            }
-            array[high] = array[low];
-        }
-        array[low] = tmp;
-        return low;
-    }
-
-    public static void quickSort1(int[] array) {
-        quick1(array, 0, array.length - 1);
-    }
-
-    private static void quick1(int[] array, int left, int right) {
-        if (left >= right) {
-            return;
-        }
-        int par = partio(array, left, right);
-        quick1(array, left, par - 1);
-        quick1(array, par + 1, right);
-    }
-
-    private static int partio(int[] array, int low, int high) {
-        int tmp = array[low];
-        while (low < high) {
-            while (low < high && array[high] >= tmp) {
-                high--;
-            }
-            array[low] = array[high];
-            while (low < high && array[low] <= tmp) {
-                low++;
-            }
-            array[high] = array[low];
-        }
-        array[low] = tmp;
-        return low;
-    }
+//    public static void quickSort2(int[] array) {
+//        quick2(array, 0, array.length - 1);
+//    }
+//
+//    private static void quick2(int[] array, int left, int right) {
+//        if (left >= right) {
+//            return;
+//        }
+//        int mid = mida(array, left, right);
+//        quick2(array, left, mid - 1);
+//        quick2(array, mid + 1, right);
+//    }
+//
+//    private static int mida(int[] array, int low, int high) {
+//        int tmp = array[low];
+//        while (low < high) {
+//            while (low < high && array[high] >= tmp) {
+//                high--;
+//            }
+//            array[low] = array[high];
+//            while (low <= high && array[low] <= tmp) {
+//                low++;
+//            }
+//            array[high] = array[low];
+//        }
+//        array[low] = tmp;
+//        return low;
+//    }
+//
+//    public static void quickSort1(int[] array) {
+//        quick1(array, 0, array.length - 1);
+//    }
+//
+//    private static void quick1(int[] array, int left, int right) {
+//        if (left >= right) {
+//            return;
+//        }
+//        int par = partio(array, left, right);
+//        quick1(array, left, par - 1);
+//        quick1(array, par + 1, right);
+//    }
+//
+//    private static int partio(int[] array, int low, int high) {
+//        int tmp = array[low];
+//        while (low < high) {
+//            while (low < high && array[high] >= tmp) {
+//                high--;
+//            }
+//            array[low] = array[high];
+//            while (low < high && array[low] <= tmp) {
+//                low++;
+//            }
+//            array[high] = array[low];
+//        }
+//        array[low] = tmp;
+//        return low;
+//    }
 
     public static int partition(int[] array, int low, int high) {
         int tmp = array[low];
@@ -126,5 +126,35 @@ public class 快速排序 {
 
     public static void quickSort(int[] array) {
         quick(array, 0, array.length - 1);
+    }
+
+    public static void quickSort1(int[] array) {
+        quick1(array, 0, array.length - 1);
+    }
+
+    private static void quick1(int[] array, int left, int right) {
+        if (left >= right) {
+            return;
+        }
+        int par = partion(array, left, right);
+        quick1(array, left, par - 1);
+        quick1(array, par + 1, right);
+
+    }
+
+    private static int partion(int[] array, int low, int high) {
+        int tmp = array[low];
+        while (low < high) {
+            while (low < high && array[high] >= tmp) {
+                high--;
+            }
+            array[low] = array[high];
+            while (low < high && array[low] <= tmp) {
+                low++;
+            }
+            array[high] = array[low];
+        }
+        array[low] = tmp;
+        return low;
     }
 }
