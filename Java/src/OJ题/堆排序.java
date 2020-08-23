@@ -5,55 +5,124 @@ package OJ题;
  * @Date 2020/8/10 8:20
  */
 public class 堆排序 {
-    public static void heapSort(int[] arr) {
-        if (arr == null || arr.length == 0) {
-            return;
-        }
-        int len = arr.length;
-        // 构建大顶堆，这里其实就是把待排序序列，变成一个大顶堆结构的数组
-        buildMaxHeap(arr, len);
-
-        // 交换堆顶和当前末尾的节点，重置大顶堆
-        for (int i = len - 1; i > 0; i--) {
-            swap(arr, 0, i);
-            len--;
-            heapify(arr, 0, len);
+    public static void heapSort(int[] array) {
+        heapInsert(array);
+        int size = array.length;
+        while (size > 1) {
+            swap(array, 0, size - 1);
+            size--;
+            heapify(array, 0, size);
         }
     }
 
-    private static void buildMaxHeap(int[] arr, int len) {
-        // 从最后一个非叶节点开始向前遍历，调整节点性质，使之成为大顶堆
-        for (int i = (int) Math.floor(len / 2) - 1; i >= 0; i--) {
-            heapify(arr, i, len);
+    private static void heapify(int[] array, int index, int size) {
+        int left = 2 * index + 1;
+        int right = 2 * index + 2;
+        while (left < size) {
+            int largestIndex;
+            if (array[left] < array[right] && right < size) {
+                largestIndex = right;
+            } else {
+                largestIndex = left;
+            }
+            if (index == largestIndex) {
+                break;
+            }
+            swap(array, largestIndex, index);
+            index = largestIndex;
+            left = 2 * index + 1;
+            right = 2 * index + 2;
         }
     }
 
-    private static void heapify(int[] arr, int i, int len) {
-        // 先根据堆性质，找出它左右节点的索引
-        int left = 2 * i + 1;
-        int right = 2 * i + 2;
-        // 默认当前节点（父节点）是最大值。
-        int largestIndex = i;
-        if (left < len && arr[left] > arr[largestIndex]) {
-            // 如果有左节点，并且左节点的值更大，更新最大值的索引
-            largestIndex = left;
-        }
-        if (right < len && arr[right] > arr[largestIndex]) {
-            // 如果有右节点，并且右节点的值更大，更新最大值的索引
-            largestIndex = right;
-        }
-
-        if (largestIndex != i) {
-            // 如果最大值不是当前非叶子节点的值，那么就把当前节点和最大值的子节点值互换
-            swap(arr, i, largestIndex);
-            // 因为互换之后，子节点的值变了，如果该子节点也有自己的子节点，仍需要再次调整。
-            heapify(arr, largestIndex, len);
+    private static void heapInsert(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            int currentIndex = i;
+            int fartherIndex = (currentIndex - 1) / 2;
+            while (array[currentIndex] > array[fartherIndex]) {
+                swap(array, currentIndex, fartherIndex);
+                currentIndex = fartherIndex;
+                fartherIndex = (currentIndex - 1) / 2;
+            }
         }
     }
 
-    private static void swap(int[] arr, int i, int j) {
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
+    private static void swap(int[] array, int currentIndex, int fartherIndex) {
+        int tmp = array[currentIndex];
+        array[currentIndex] = array[fartherIndex];
+        array[fartherIndex] = tmp;
     }
+//    //堆排序
+//    public static void heapSort(int[] arr) {
+//        //构造大根堆
+//        heapInsert(arr);
+//        int size = arr.length;
+//        while (size > 1) {
+//            //固定最大值
+//            swap(arr, 0, size - 1);
+//            size--;
+//            //构造大根堆
+//            heapify(arr, 0, size);
+//
+//        }
+//
+//    }
+//
+//    //构造大根堆（通过新插入的数上升）
+//    public static void heapInsert(int[] arr) {
+//        for (int i = 0; i < arr.length; i++) {
+//            //当前插入的索引
+//            int currentIndex = i;
+//            //父结点索引
+//            int fatherIndex = (currentIndex - 1) / 2;
+//            //如果当前插入的值大于其父结点的值,则交换值，并且将索引指向父结点
+//            //然后继续和上面的父结点值比较，直到不大于父结点，则退出循环
+//            while (arr[currentIndex] > arr[fatherIndex]) {
+//                //交换当前结点与父结点的值
+//                swap(arr, currentIndex, fatherIndex);
+//                //将当前索引指向父索引
+//                currentIndex = fatherIndex;
+//                //重新计算当前索引的父索引
+//                fatherIndex = (currentIndex - 1) / 2;
+//            }
+//        }
+//    }
+//
+//    //将剩余的数构造成大根堆（通过顶端的数下降）
+//    public static void heapify(int[] arr, int index, int size) {
+//        int left = 2 * index + 1;
+//        int right = 2 * index + 2;
+//        while (left < size) {
+//            int largestIndex;
+//            //判断孩子中较大的值的索引（要确保右孩子在size范围之内）
+//            if (arr[left] < arr[right] && right < size) {
+//                largestIndex = right;
+//            } else {
+//                largestIndex = left;
+//            }
+//            //比较父结点的值与孩子中较大的值，并确定最大值的索引
+//            if (arr[index] > arr[largestIndex]) {
+//                largestIndex = index;
+//            }
+//            //如果父结点索引是最大值的索引，那已经是大根堆了，则退出循环
+//            if (index == largestIndex) {
+//                break;
+//            }
+//            //父结点不是最大值，与孩子中较大的值交换
+//            swap(arr, largestIndex, index);
+//            //将索引指向孩子中较大的值的索引
+//            index = largestIndex;
+//            //重新计算交换之后的孩子的索引
+//            left = 2 * index + 1;
+//            right = 2 * index + 2;
+//        }
+//
+//    }
+//
+//    //交换数组中两个元素的值
+//    public static void swap(int[] arr, int i, int j) {
+//        int temp = arr[i];
+//        arr[i] = arr[j];
+//        arr[j] = temp;
+//    }
 }
