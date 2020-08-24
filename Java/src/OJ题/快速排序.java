@@ -117,7 +117,6 @@ public class 快速排序 {
             swap(array, left, right);
         }
     }
-
     private static void swap(int[] array, int i, int j) {
         int tmp = array[i];
         array[i] = array[j];
@@ -128,6 +127,9 @@ public class 快速排序 {
         quick(array, 0, array.length - 1);
     }
 
+
+
+    //====================================================
     public static void quickSort1(int[] array) {
         quick1(array, 0, array.length - 1);
     }
