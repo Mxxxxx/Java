@@ -127,8 +127,6 @@ public class 快速排序 {
         quick(array, 0, array.length - 1);
     }
 
-
-
     //====================================================
     public static void quickSort1(int[] array) {
         quick1(array, 0, array.length - 1);
