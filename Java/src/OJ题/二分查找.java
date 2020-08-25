@@ -20,8 +20,7 @@ public class 二分查找 {
                 right = mid;
             } else {
                 left = mid + 1;
-            }
-        }
+            } }
         return right + 1;
     }
 }
