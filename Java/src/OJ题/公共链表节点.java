@@ -36,5 +36,18 @@ public class 公共链表节点 {
             }
             return p1;
         }
+
+
+        public ListNode ReverseList(ListNode head) {
+            ListNode pre = null;
+            ListNode next = null;
+            while (head != null) {
+                next = head.next;
+                head.next = pre;
+                pre = head;
+                head = next;
+            }
+            return pre;
+        }
     }
 }
