@@ -39,8 +39,8 @@ public class 公共链表节点 {
 
 
         public ListNode ReverseList(ListNode head) {
-            ListNode pre = null;
-            ListNode next = null;
+            ListNode pre = null;//前
+            ListNode next = null;//后
             while (head != null) {
                 next = head.next;
                 head.next = pre;
