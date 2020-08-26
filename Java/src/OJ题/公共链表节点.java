@@ -60,4 +60,32 @@ public class 公共链表节点 {
             return pre;
         }
     }
+
+    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+        // write code here
+        if (l1 == null) return l2;
+        if (l2 == null) return l1;
+        ListNode cur1 = l1;
+        ListNode cur2 = l2;
+        ListNode newList = new ListNode(-1);
+        ListNode cur = newList;
+        while (cur1 != null || cur2.next != null) {
+            if (cur1 == null) {
+                newList.next = cur2;
+                break;
+            } else if (cur2 == null) {
+                newList.next = cur1;
+                break;
+            }
+            if (cur1.val <= cur2.val) {
+                newList.next = cur1;
+                cur1 = cur1.next;
+            } else {
+                newList.next = cur2;
+                cur2 = cur2.next;
+            }
+            newList = newList.next;
+        }
+        return cur.next;
+    }
 }
