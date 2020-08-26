@@ -17,10 +17,11 @@ public class 二分查找 {
         while (left < right) {
             mid = (left + right) >>> 1;
             if (a[mid] >= v) {
-                right = mid;
+                right = mid;//如果大，继续判断mid前是否还有比v大的
             } else {
-                left = mid + 1;
-            } }
+                left = mid + 1;//小于v则说明，mid位置是第一个大于v的，跳出，通过 （left = mid + 1 ） >（ right =mid）
+            }
+        }
         return right + 1;
     }
 }

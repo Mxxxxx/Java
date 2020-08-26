@@ -117,6 +117,7 @@ public class 快速排序 {
             swap(array, left, right);
         }
     }
+
     private static void swap(int[] array, int i, int j) {
         int tmp = array[i];
         array[i] = array[j];
@@ -156,5 +157,34 @@ public class 快速排序 {
         }
         array[low] = tmp;
         return low;
+    }
+
+    //    ==============================================
+    public static void quickSort2(int[] array) {
+        quick2(array, 0, array.length - 1);
+    }
+
+    private static void quick2(int[] array, int left, int right) {
+        if (left >= right) {
+            return;
+        }
+        int par = partion2(array, left, right);
+        quick2(array, left, par - 1);
+        quick2(array, par + 1, right);
+    }
+
+    private static int partion2(int[] array, int low, int high) {
+        int tmp = array[low];
+        while (low < high) {
+            while (low < high && array[high] > tmp) {
+                high--;
+            }
+            array[low] = array[high];
+            while (low < high && array[low] < tmp) {
+                low++;
+            }
+            array[high] = array[low];
+        }
+        return  low;
     }
 }

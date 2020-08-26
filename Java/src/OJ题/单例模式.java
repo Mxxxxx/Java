@@ -15,6 +15,41 @@ public class 单例模式 {
     }
 }
 
+class Hungera {
+    private static Hungera hungera = new Hungera();
+
+    public static Hungera getHungera() {
+        return hungera;
+    }
+}
+
+class Lazya {
+    private static Lazya lazya;
+
+    public static Lazya getLazya() {
+        if (lazya == null) {
+            lazya = new Lazya();
+        }
+        return lazya;
+    }
+}
+
+class Lazyb {
+    private static Lazyb lazyb;
+
+    public static Lazyb getLazyb() {
+        if (lazyb == null) {
+            synchronized (Lazyb.class) {
+                if (lazyb == null) {
+                    lazyb = new Lazyb();
+                }
+            }
+        }
+        return lazyb;
+    }
+}
+//=============================
+
 class Hungry {
     private static Hungry hungry = new Hungry();
 
