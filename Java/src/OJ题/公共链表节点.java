@@ -60,7 +60,7 @@ public class 公共链表节点 {
             return pre;
         }
     }
-
+//合并有序链表
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         // write code here
         if (l1 == null) return l2;
