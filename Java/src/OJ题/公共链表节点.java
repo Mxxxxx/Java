@@ -60,7 +60,8 @@ public class 公共链表节点 {
             return pre;
         }
     }
-//合并有序链表
+
+    //合并有序链表
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         // write code here
         if (l1 == null) return l2;
@@ -87,5 +88,20 @@ public class 公共链表节点 {
             newList = newList.next;
         }
         return cur.next;
+    }
+
+    //判断链表是否有环
+    public boolean hasCycle(ListNode head) {
+        ListNode fast = head;
+        ListNode slow = head;
+        while (fast != null && slow != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+            if (fast == slow) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }
