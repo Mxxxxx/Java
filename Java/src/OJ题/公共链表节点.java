@@ -89,6 +89,7 @@ public class 公共链表节点 {
         }
         return cur.next;
     }
+
     //判断链表是否有环
     public boolean hasCycle(ListNode head) {
         ListNode fast = head;
