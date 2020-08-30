@@ -125,7 +125,6 @@ public class 公共链表节点 {
         }
         return null;
     }
-
     //删除倒数节点
     public ListNode removeNthFromEnd(ListNode head, int n) {
         if (head == null)
