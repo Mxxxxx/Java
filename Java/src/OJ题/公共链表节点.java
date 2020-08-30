@@ -105,6 +105,7 @@ public class 公共链表节点 {
         return false;
     }
 
+    //找到环入口
     public ListNode detectCycle(ListNode head) {
         ListNode slow = head;
         ListNode fast = head;
@@ -123,5 +124,26 @@ public class 公共链表节点 {
             }
         }
         return null;
+    }
+
+    //删除倒数节点
+    public ListNode removeNthFromEnd(ListNode head, int n) {
+        if (head == null)
+            return head;
+        ListNode node = head;
+        int len = 0;
+        while (node != null) {
+            node = node.next;
+            len++;
+        }
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+        ListNode cur = head, pre = dummy;
+        for (int i = 1; i <= len - n; i++) {
+            pre = cur;//前一个保存
+            cur = cur.next;//后一个
+        }
+        pre.next = cur.next;//前一个节点next指向后一个
+        return dummy.next;
     }
 }
