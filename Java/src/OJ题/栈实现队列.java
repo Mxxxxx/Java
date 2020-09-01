@@ -9,7 +9,6 @@ import java.util.Stack;
 public class 栈实现队列 {
     Stack<Integer> stack1 = new Stack<Integer>();
     Stack<Integer> stack2 = new Stack<Integer>();
-
     public void push(int node) {
         stack1.push(node);
     }
@@ -20,6 +19,10 @@ public class 栈实现队列 {
             }
         }
         return stack2.pop();
+    }
+
+    public static void main(String[] args) {
+        System.out.println();
     }
 }
 
