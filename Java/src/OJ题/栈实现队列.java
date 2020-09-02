@@ -20,7 +20,6 @@ public class 栈实现队列 {
         }
         return stack2.pop();
     }
-
     public static void main(String[] args) {
         System.out.println();
     }
