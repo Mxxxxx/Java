@@ -125,6 +125,7 @@ public class 公共链表节点 {
         }
         return null;
     }
+
     //删除倒数节点
     public ListNode removeNthFromEnd(ListNode head, int n) {
         if (head == null)
@@ -145,4 +146,17 @@ public class 公共链表节点 {
         pre.next = cur.next;//前一个节点next指向后一个
         return dummy.next;
     }
+
+    public ListNode hasCycle1(ListNode head) {
+        ListNode pre = null;
+        ListNode next = null;
+        while (head != null) {
+            next = head.next;
+            head.next = pre;
+            pre = head;
+            head = next;
+        }
+        return pre;
+    }
+
 }
