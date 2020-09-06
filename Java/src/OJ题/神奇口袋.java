@@ -27,7 +27,6 @@ public class 神奇口袋 {
         count(40, n);
         System.out.println(count);
     }
-
     public static void count(int s, int n) {
         /**
          * s表示背包剩下的容量大小
