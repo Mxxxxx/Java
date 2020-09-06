@@ -160,31 +160,34 @@ public class 快速排序 {
     }
 
     //    ==============================================
-    public static void quickSort2(int[] array) {
-        quick2(array, 0, array.length - 1);
+    public static void quickSort3(int[] array) {
+        quick3(array, 0, array.length - 1);
     }
 
-    private static void quick2(int[] array, int left, int right) {
-        if (left >= right) {
+    private static void quick3(int[] array, int low, int high) {
+        if (low >= high) {
             return;
         }
-        int par = partion2(array, left, right);
-        quick2(array, left, par - 1);
-        quick2(array, par + 1, right);
+        int par = partion3(array, low, high);
+        quick3(array, low, par - 1);
+        quick3(array, par + 1, high);
     }
 
-    private static int partion2(int[] array, int low, int high) {
-        int tmp = array[low];
-        while (low < high) {
-            while (low < high && array[high] > tmp) {
-                high--;
+    private static int partion3(int[] array, int left, int right) {
+        int tmp = array[0];
+        while (left < right) {
+            while (left < right && array[right] >= tmp) {
+                right--;
             }
-            array[low] = array[high];
-            while (low < high && array[low] < tmp) {
-                low++;
+            array[0] = array[right];
+            while (left < right && array[left] <= tmp) {
+                left++;
             }
-            array[high] = array[low];
+            array[right] = array[left];
         }
-        return  low;
+        array[left] = tmp;
+        return left;
     }
+
+
 }
