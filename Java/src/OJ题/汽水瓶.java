@@ -18,7 +18,6 @@ public class 汽水瓶 {
         }
         return sum;
     }
-
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         while (in.hasNext()) {
