@@ -88,4 +88,20 @@ public class 插入排序 {
             array[j + 1] = tmp;
         }
     }
+
+    public static void fun5(int[] array) {
+        int tmp = array[0];
+        for (int i = 1; i < array.length; i++) {
+            tmp = array[i];
+            int j = i - 1;
+            for (; j > 0; j--) {
+                if (array[j] > tmp) {
+                    array[j + 1] = array[j];
+                } else {
+                    break;
+                }
+            }
+            array[j + 1] = tmp;
+        }
+    }
 }
