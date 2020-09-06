@@ -10,8 +10,8 @@ public class 汽水瓶 {
     public static int func(int num) {
         int sum = 0;
         while (num > 2) {
-            sum += num / 3;//直接喝的
-            num = num / 3 + num % 3;//剩余
+            sum += num / 3;
+            num = num / 3 + num % 3;
             if (num == 2) {
                 sum += 1;
             }
