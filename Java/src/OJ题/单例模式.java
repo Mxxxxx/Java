@@ -148,61 +148,43 @@ class B {
 //        return singletonLazy;
 //    }
 //}
-// 双重检查锁定单例(Double Check Lock)
-class Singleton1 {
-    private static Singleton1 singleton;
 
-    private Singleton1() {
+//饿汉单例
+class HungrySingle {
+    private static HungrySingle hungrySingle = new HungrySingle();
+
+    public static HungrySingle getHungrySingle() {
+        return hungrySingle;
+    }
+}
+//懒汉单例
+class LazySingle {
+    private static LazySingle lazySingle;
+
+    private LazySingle() {
+
     }
 
-    public void doSomething() {
-        System.out.println("do something");
-    }
-
-    public static Singleton1 getInstance() {
-        if (singleton == null) {
-            synchronized (Singleton1.class) {
-                if (singleton == null) {
-                    singleton = new Singleton1();
-                }
-            }
+    public static LazySingle getInstance() {
+        if (lazySingle == null) {
+            lazySingle = new LazySingle();
         }
-        return singleton;
+        return lazySingle;
+    }
+}
+//懒汉双重检测
+class LazySingleDouble {
+    private static LazySingleDouble lazySingleDouble;
+
+    private LazySingleDouble() {
+
+    }
+
+    public static synchronized LazySingleDouble getLazySingleDouble() {
+        if (lazySingleDouble == null) {
+            lazySingleDouble=new LazySingleDouble();
+        }
+        return lazySingleDouble;
     }
 }
 
-class SingleDouble {
-    private static SingleDouble singleDouble;
-
-    private SingleDouble() {
-    }
-
-    public static SingleDouble singleDouble() {
-        if (singleDouble == null) {
-            synchronized (SingleDouble.class) {
-                if (singleDouble == null) {
-                    singleDouble = new SingleDouble();
-                }
-            }
-        }
-        return singleDouble;
-    }
-}
-
-class C {
-    private static C c;
-
-    private C() {
-    }
-
-    public static C getInstance() {
-        if (c == null) {
-            synchronized (C.class) {
-                if (c == null) {
-                    c = new C();
-                }
-            }
-        }
-        return c;
-    }
-}
