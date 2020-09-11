@@ -8,14 +8,22 @@ import java.util.Scanner;
  * @Date 2020/9/10 16:20
  */
 public class ti {
+    //    public static void main(String[] args) {
+//        Scanner in = new Scanner(System.in);
+//        while (in.hasNext()) {
+//            String num = in.next();
+//            int n = in.nextInt();
+//            judgeFunc(num);
+//            func(num, n);
+//        }
+//    }
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        while (in.hasNext()) {
-            String num = in.next();
-            int n = in.nextInt();
-            judgeFunc(num);
-            func(num, n);
-        }
+        String s1 = "Programming";
+        String s2 = new String("Programming");
+        String s3 = "Program" + "ming";
+        System.out.println(s1 == s2);
+        System.out.println(s1 == s3);
+        System.out.println(s1 == s1.intern());
     }
 
     private static void func(String num, int n) {
@@ -32,7 +40,7 @@ public class ti {
             tmp = chars[i];
             int j = i - 1;
             for (; j > 0; j--) {
-                if (chars[j] < tmp) {
+                if (chars[j] - '0' < tmp - '0') {
                     chars[j + 1] = chars[j];
                 } else {
                     break;
