@@ -33,6 +33,7 @@ public class 选择排序 {
     }
 
 
+
     public static void xuanze(int[] array) {
         for (int i = 0; i < array.length; i++) {
             for (int j = i + 1; j < array.length; j++) {

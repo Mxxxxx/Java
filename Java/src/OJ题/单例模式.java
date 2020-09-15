@@ -157,6 +157,16 @@ class HungrySingle {
         return hungrySingle;
     }
 }
+
+//==============
+class hungrySingle {
+    private static hungrySingle hungrySingle1 = new hungrySingle();
+
+    public static hungrySingle getInstance() {
+        return hungrySingle1;
+    }
+}
+
 //懒汉单例
 class LazySingle {
     private static LazySingle lazySingle;
@@ -172,6 +182,23 @@ class LazySingle {
         return lazySingle;
     }
 }
+
+//=======
+class lazySingle {
+    private static lazySingle lazySingle1;
+
+    private lazySingle() {
+
+    }
+
+    public static lazySingle getInstance() {
+        if (lazySingle1 == null) {
+            lazySingle1 = new lazySingle();
+        }
+        return lazySingle1;
+    }
+}
+
 //懒汉双重检测
 class LazySingleDouble {
     private static LazySingleDouble lazySingleDouble;
@@ -182,9 +209,25 @@ class LazySingleDouble {
 
     public static synchronized LazySingleDouble getLazySingleDouble() {
         if (lazySingleDouble == null) {
-            lazySingleDouble=new LazySingleDouble();
+            lazySingleDouble = new LazySingleDouble();
         }
         return lazySingleDouble;
+    }
+}
+
+//============
+class lazySingleDouble {
+    private static lazySingleDouble lazySingleDouble1;
+
+    private lazySingleDouble() {
+
+    }
+
+    public static synchronized lazySingleDouble getInstance() {
+        if (lazySingleDouble1 == null) {
+            lazySingleDouble1 = new lazySingleDouble();
+        }
+        return lazySingleDouble1;
     }
 }
 
