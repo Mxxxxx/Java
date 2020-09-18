@@ -189,5 +189,11 @@ public class 快速排序 {
         return left;
     }
 
-
+    public static void main(String[] args) {
+        int[] array = {1, 5, 6, 7, 7, 8, 6, 4};
+        quickSort1(array);
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i]);
+        }
+    }
 }

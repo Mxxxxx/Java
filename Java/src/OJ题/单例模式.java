@@ -131,7 +131,6 @@ class B {
         return b;
     }
 }
-
 //class SingletonLazy {
 //    private static SingletonLazy singletonLazy;
 //
