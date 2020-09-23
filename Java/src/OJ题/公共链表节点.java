@@ -36,8 +36,6 @@ public class 公共链表节点 {
             }
             return p1;
         }
-
-
         public ListNode ReverseList(ListNode head) {
 //            ListNode pre = null;//前
 //            ListNode next = null;//后
@@ -60,7 +58,6 @@ public class 公共链表节点 {
             return pre;
         }
     }
-
     //合并有序链表
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         // write code here
